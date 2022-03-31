@@ -43,16 +43,6 @@ npm run build
 
 to build dist directory (.ts to .js files)
 
-or
-
-```bash
-npm run buildAll
-```
-
-to build dist directory (.ts to .js files) + package the app (see below)
-
-### Cli command line Application
-
 #### Packaging
 
 In order to make the application available in a single package, run
@@ -60,6 +50,16 @@ In order to make the application available in a single package, run
 ```bash
 npm run package
 ```
+
+### Build application + Packaging
+
+```bash
+npm run buildAll
+```
+
+to build dist directory (.ts to .js files) + package the app
+
+### Cli command line Application
 
 #### Use it
 
