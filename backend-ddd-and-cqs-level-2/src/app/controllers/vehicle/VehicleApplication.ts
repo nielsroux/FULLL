@@ -44,7 +44,6 @@ export class VehicleApplication {
     const location = Localization.create({ latitude, longitude })
     const vehicle = Vehicle.create(vehicleDto, vehicleDto.guid)
 
-    //console.log(location, vehicle)
     if (vehicle.isSameLocalization(location)) {
       return null
     }

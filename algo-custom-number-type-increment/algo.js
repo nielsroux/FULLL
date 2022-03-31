@@ -8,13 +8,12 @@ const increment = (number) => {
     // Start with last index
     let index = number.length - 1;
 
-    // while the index is valid and the value at [index] ==
-    // 9 set it as 0
+    // while the index is valid and the value at [index] == 9 set it as 0
     while (number[index] == 9) number[index--] = 0;
 
     // if index < 0 (if all digits were 9)
     if (index < 0)
-        // insert an one at the beginning of the vector
+        // insert 1 at the beginning
         number.unshift(1);
     // else increment the value at [index]
     else number[index]++;
@@ -23,7 +22,6 @@ const increment = (number) => {
 };
 
 let number = [9, 9];
-
 for (let index = 0; index < 150; index++) {
     console.log(increment(number));
 }

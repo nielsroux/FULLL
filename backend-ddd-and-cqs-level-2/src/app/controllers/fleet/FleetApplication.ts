@@ -25,6 +25,11 @@ export class FleetApplication {
     return fleet
   }
 
+  async saveFleet({ fleet }: any): Promise<Fleet> {
+    await this.fleetRepository.save(fleet)
+    return fleet
+  }
+
   async registerVehicle({ fleetId, vehicleId }: any): Promise<Fleet | null> {
     const fleetDto = await this.getFleetById(fleetId)
     const fleet = Fleet.create(fleetDto, fleetDto.guid)

@@ -1,10 +1,11 @@
 // cucumber.js
 let common = [
-  'features/**/*.feature', // Specify our feature files
+  'src/features/**/*.feature', // Specify our feature files
   '--require-module ts-node/register', // Load TypeScript module
   '--require-module tsconfig-paths/register', // Load TS config paths
-  '--require features/step-definitions/**/*.ts', // Load step definitions
-  '--format progress-bar', // Load custom formatter
+  '--require src/features/step-definitions/**/*.ts', // Load step definitions
+  //'--format progress-bar', // Load custom formatter
+  //'--format cucumber-pretty',
   '--publish-quiet', //disable message
 ].join(' ')
 
