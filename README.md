@@ -18,4 +18,4 @@ see [Backend - DDD and CQS level 2](backend-ddd-and-cqs-level-2)
 
 ### Contributes
 
-Make with love By Slein.
+Made with love By Slein.
