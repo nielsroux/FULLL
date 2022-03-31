@@ -8,7 +8,7 @@
 
 1. Node.js
 2. TypeScript
-3. MongoDB with MongoDB native driver (mongodb package on NPM)
+3. MongoDB with MongoDB native driver (mongodb package on NPM) [Download MondoDB Community Server](https://www.mongodb.com/try/download/community)
 4. InversifyJS as an IoC container
 
 ### Installation
@@ -33,19 +33,23 @@ You also need to setup and initialise MongoDB database. Then, copy the `.env_exa
 cp .env_template .env
 ```
 
-Adjust the DB_NAME and MONGODB_URI to match your configuration then run
+Adjust the DB_NAME and MONGODB_URI to match your configuration.
+
+### Build application
 
 ```bash
-npm run dev
+npm run build
 ```
 
-### Cucumber test
+to build dist directory (.ts to .js files)
 
-Launch cucumber test with the following command.
+or
 
 ```bash
-npm test
+npm run buildAll
 ```
+
+to build dist directory (.ts to .js files) + package the app (see below)
 
 ### Cli command line Application
 
@@ -57,10 +61,34 @@ In order to make the application available in a single package, run
 npm run package
 ```
 
-then use it with the following commands
+#### Use it
+
+Launch cli with the following commands
+
+Launch script :
+
+```shell
+./fleet
+```
+
+or
+
+```shell
+./fleet --help # display helpers
+```
+
+Then use it :
 
 ```shell
 ./fleet create <userId> # returns fleetId on the standard output
 ./fleet register-vehicle <fleetId> <vehiclePlateNumber>
 ./fleet localize-vehicle <fleetId> <vehiclePlateNumber> lat lng [alt]
+```
+
+### Cucumber test
+
+Launch cucumber test with the following command.
+
+```bash
+npm test
 ```

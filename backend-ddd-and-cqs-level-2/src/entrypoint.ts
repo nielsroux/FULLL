@@ -6,7 +6,8 @@ const initialise = async () => {
   yargs(hideBin(process.argv))
     .commandDir('app/commands')
     .strict()
-    .alias({ h: 'help' }).argv
+    .alias({ h: 'help' })
+    .scriptName('').argv
 }
 
 export { initialise }
